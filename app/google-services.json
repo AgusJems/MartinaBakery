@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "686237013443",
+    "project_id": "martina-bakery",
+    "storage_bucket": "martina-bakery.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686237013443:android:4ad6b7475df8a63a531976",
+        "android_client_info": {
+          "package_name": "com.android.martinabakery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686237013443-ttfdna6e6k35rl54276nefo8d51v1uj3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiXLf5aGtA_g8NGZHam3Bu6vXbtrpZAnc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "686237013443-ttfdna6e6k35rl54276nefo8d51v1uj3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
