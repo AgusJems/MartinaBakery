@@ -1,17 +1,13 @@
-package com.android.martinabakery.login
+package com.android.martinabakery.Login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.TextUtils
 import com.android.martinabakery.MainActivity
-import com.android.martinabakery.R
 import com.android.martinabakery.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
 
-class login : AppCompatActivity() {
+class Login : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
     private lateinit var auth: FirebaseAuth

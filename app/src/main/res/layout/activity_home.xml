@@ -4,76 +4,569 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home"
+    tools:context=".Home"
     android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ic_bg_home" />
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_centerHorizontal="true">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="30dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Martina Bakery"
-                android:textColor="@color/white"
-                android:fontFamily="@font/salsa_regular"
-                android:textSize="18dp" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_bakery"
-                android:layout_marginLeft="10dp"/>
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="60dp">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="16dp">
-            <ImageButton
+                android:background="@drawable/ic_bg_home" />
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
-                android:padding="4dp"
-                android:layout_marginRight="10dp"
-                android:src="@drawable/ic_search"/>
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="30dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Martina Bakery"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/salsa_regular"
+                        android:textSize="18dp" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_bakery"
+                        android:layout_marginLeft="10dp"/>
+                </LinearLayout>
+            </LinearLayout>
 
-            <EditText
-                android:layout_width="390dp"
-                android:layout_height="45dp"
-                android:alpha="0.80"
-                android:background="@drawable/ic_bg_search"
-                android:fontFamily="@font/inter_medium"
-                android:hint="Cari produk"
-                android:padding="12dp"
-                android:textColorHint="@color/white"
-                android:textColor="@color/white"
-                android:textSize="14sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_search" />
+
+                    <EditText
+                        android:layout_width="390dp"
+                        android:layout_height="45dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:alpha="0.95"
+                        android:background="@drawable/ic_bg_search"
+                        android:fontFamily="@font/inter_medium"
+                        android:hint="Cari produk"
+                        android:padding="12dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager_ImageSlider"
+                    android:layout_width="370dp"
+                    android:layout_height="183dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:paddingStart="70dp"
+                    android:paddingEnd="70dp" />
+
+                <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                    android:id="@+id/dot1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    app:dotsColor="#E0E0E0"
+                    app:dotsSize="12dp"
+                    app:dotsSpacing="3dp"
+                    app:progressMode="true"
+                    app:selectedDotColor="#FF72C3" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/inter_bold"
+                        android:text="Penawaran eksklusif"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/btn_lihat_semua"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/inter_medium"
+                        android:paddingLeft="88dp"
+                        android:text="lihat semua"
+                        android:textColor="#0EB177"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="173.32dp"
+                            android:layout_height="248.51dp"
+                            android:layout_margin="20dp"
+                            app:cardCornerRadius="18dp"
+                            app:cardElevation="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="110dp"
+                                    android:layout_height="110dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="8dp"
+                                    android:src="@drawable/vanilla_strawberry" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:layout_marginTop="12dp"
+                                    android:fontFamily="@font/robotocondensed_bold"
+                                    android:text="Vanilla Stawberry"
+                                    android:textColor="@color/black"
+                                    android:textSize="16dp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="15dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/robotocondensed_bold"
+                                        android:text="Rp. 150k"
+                                        android:textColor="@color/black"
+                                        android:textSize="18dp" />
+
+                                    <ImageView
+                                        android:id="@+id/btn_add_produk"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="28dp"
+                                        android:src="@drawable/ic_add_produk" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="173.32dp"
+                            android:layout_height="248.51dp"
+                            android:layout_margin="20dp"
+                            app:cardCornerRadius="18dp"
+                            app:cardElevation="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="110dp"
+                                    android:layout_height="110dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="8dp"
+                                    android:src="@drawable/vanilla_strawberry" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:layout_marginTop="12dp"
+                                    android:fontFamily="@font/robotocondensed_bold"
+                                    android:text="Vanilla Stawberry"
+                                    android:textColor="@color/black"
+                                    android:textSize="16dp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="15dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/robotocondensed_bold"
+                                        android:text="Rp. 150k"
+                                        android:textColor="@color/black"
+                                        android:textSize="18dp" />
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="28dp"
+                                        android:src="@drawable/ic_add_produk" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:fontFamily="@font/robotocondensed_regular"
+                                    android:text="diameter 18cm"
+                                    android:textColor="#7C7C7C"
+                                    android:textSize="12dp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="173.32dp"
+                            android:layout_height="248.51dp"
+                            android:layout_margin="20dp"
+                            app:cardCornerRadius="18dp"
+                            app:cardElevation="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="110dp"
+                                    android:layout_height="110dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="8dp"
+                                    android:src="@drawable/vanilla_strawberry" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:layout_marginTop="12dp"
+                                    android:fontFamily="@font/robotocondensed_bold"
+                                    android:text="Vanilla Stawberry"
+                                    android:textColor="@color/black"
+                                    android:textSize="16dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:fontFamily="@font/robotocondensed_regular"
+                                    android:text="diameter 18cm"
+                                    android:textColor="#7C7C7C"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:fontFamily="@font/robotocondensed_regular"
+                                    android:text="diameter 18cm"
+                                    android:textColor="#7C7C7C"
+                                    android:textSize="12dp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="15dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/robotocondensed_bold"
+                                        android:text="Rp. 150k"
+                                        android:textColor="@color/black"
+                                        android:textSize="18dp" />
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="28dp"
+                                        android:src="@drawable/ic_add_produk" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/inter_bold"
+                        android:text="Penjualan terbaik"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/btn_lihat_semua2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/inter_medium"
+                        android:paddingLeft="113dp"
+                        android:text="lihat semua"
+                        android:textColor="#0EB177"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="173.32dp"
+                            android:layout_height="248.51dp"
+                            android:layout_margin="20dp"
+                            app:cardCornerRadius="18dp"
+                            app:cardElevation="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="110dp"
+                                    android:layout_height="110dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="8dp"
+                                    android:src="@drawable/blackforest" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:layout_marginTop="12dp"
+                                    android:fontFamily="@font/robotocondensed_bold"
+                                    android:text="Vanilla Stawberry"
+                                    android:textColor="@color/black"
+                                    android:textSize="16dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:fontFamily="@font/robotocondensed_regular"
+                                    android:text="diameter 18cm"
+                                    android:textColor="#7C7C7C"
+                                    android:textSize="12dp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="15dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/robotocondensed_bold"
+                                        android:text="Rp. 150k"
+                                        android:textColor="@color/black"
+                                        android:textSize="18dp" />
+
+                                    <ImageView
+                                        android:id="@+id/btn_add_produk1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="28dp"
+                                        android:src="@drawable/ic_add_produk" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="173.32dp"
+                            android:layout_height="248.51dp"
+                            android:layout_margin="20dp"
+                            app:cardCornerRadius="18dp"
+                            app:cardElevation="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="110dp"
+                                    android:layout_height="110dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="8dp"
+                                    android:src="@drawable/blackforest" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:layout_marginTop="12dp"
+                                    android:fontFamily="@font/robotocondensed_bold"
+                                    android:text="Vanilla Stawberry"
+                                    android:textColor="@color/black"
+                                    android:textSize="16dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:fontFamily="@font/robotocondensed_regular"
+                                    android:text="diameter 18cm"
+                                    android:textColor="#7C7C7C"
+                                    android:textSize="12dp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="15dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/robotocondensed_bold"
+                                        android:text="Rp. 150k"
+                                        android:textColor="@color/black"
+                                        android:textSize="18dp" />
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="28dp"
+                                        android:src="@drawable/ic_add_produk" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="173.32dp"
+                            android:layout_height="248.51dp"
+                            android:layout_margin="20dp"
+                            app:cardCornerRadius="18dp"
+                            app:cardElevation="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="110dp"
+                                    android:layout_height="110dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="8dp"
+                                    android:src="@drawable/blackforest" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:layout_marginTop="12dp"
+                                    android:fontFamily="@font/robotocondensed_bold"
+                                    android:text="Vanilla Stawberry"
+                                    android:textColor="@color/black"
+                                    android:textSize="16dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:fontFamily="@font/robotocondensed_regular"
+                                    android:text="diameter 18cm"
+                                    android:textColor="#7C7C7C"
+                                    android:textSize="12dp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="15dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/robotocondensed_bold"
+                                        android:text="Rp. 150k"
+                                        android:textColor="@color/black"
+                                        android:textSize="18dp" />
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="28dp"
+                                        android:src="@drawable/ic_add_produk" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </HorizontalScrollView>
+            </LinearLayout>
+
         </RelativeLayout>
-
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/viewPager_ImageSlider"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingStart="70dp"
-            android:paddingEnd="70dp"/>
-    </LinearLayout>
-
+    </ScrollView>
 </RelativeLayout>

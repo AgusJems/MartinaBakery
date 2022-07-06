@@ -3,18 +3,28 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Ade/MartinaBakery/app/src/main/res/drawable/dc1.xml" value="0.2005" />
+        <entry key="..\:/Ade/MartinaBakery/app/src/main/res/drawable/default_selected_dot.xml" value="0.1835" />
         <entry key="..\:/Ade/MartinaBakery/app/src/main/res/drawable/editext_bg.xml" value="0.2005" />
+        <entry key="..\:/Ade/MartinaBakery/app/src/main/res/drawable/ic_add_produk.xml" value="0.1835" />
+        <entry key="..\:/Ade/MartinaBakery/app/src/main/res/drawable/ic_back.xml" value="0.1835" />
         <entry key="..\:/Ade/MartinaBakery/app/src/main/res/drawable/ic_bg_home.xml" value="0.2005" />
         <entry key="..\:/Ade/MartinaBakery/app/src/main/res/drawable/ic_bg_login.xml" value="0.2005" />
         <entry key="..\:/Ade/MartinaBakery/app/src/main/res/drawable/ic_bg_login2.xml" value="0.2005" />
         <entry key="..\:/Ade/MartinaBakery/app/src/main/res/drawable/ic_bg_search.xml" value="0.2005" />
+        <entry key="..\:/Ade/MartinaBakery/app/src/main/res/drawable/ic_damieditnumb.xml" value="0.1835" />
+        <entry key="..\:/Ade/MartinaBakery/app/src/main/res/drawable/ic_favorite.xml" value="0.1835" />
+        <entry key="..\:/Ade/MartinaBakery/app/src/main/res/drawable/ic_min.xml" value="0.1835" />
+        <entry key="..\:/Ade/MartinaBakery/app/src/main/res/drawable/ic_plus.xml" value="0.1835" />
         <entry key="..\:/Ade/MartinaBakery/app/src/main/res/drawable/ic_search.xml" value="0.2005" />
         <entry key="..\:/Ade/MartinaBakery/app/src/main/res/drawable/people2.xml" value="0.2005" />
-        <entry key="..\:/Ade/MartinaBakery/app/src/main/res/layout/activity_home.xml" value="0.176" />
+        <entry key="..\:/Ade/MartinaBakery/app/src/main/res/layout/activity_detail_produk.xml" value="0.22402736212056434" />
+        <entry key="..\:/Ade/MartinaBakery/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/Ade/MartinaBakery/app/src/main/res/layout/activity_login.xml" value="0.21784420289855072" />
         <entry key="..\:/Ade/MartinaBakery/app/src/main/res/layout/activity_main.xml" value="0.21784420289855072" />
         <entry key="..\:/Ade/MartinaBakery/app/src/main/res/layout/activity_register.xml" value="0.21784420289855072" />
         <entry key="..\:/Ade/MartinaBakery/app/src/main/res/layout/activity_splashscreen.xml" value="0.21784420289855072" />
+        <entry key="..\:/Ade/MartinaBakery/app/src/main/res/layout/item_page_detail_produk.xml" value="0.22402736212056434" />
         <entry key="..\:/Ade/MartinaBakery/app/src/main/res/layout/slide_item_container.xml" value="0.21804170444242973" />
       </map>
     </option>

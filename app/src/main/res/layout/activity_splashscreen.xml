@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#D04696"
-    tools:context=".login.splashscreen">
+    tools:context=".Login.Splashscreen">
 
     <ImageView
         android:layout_width="wrap_content"

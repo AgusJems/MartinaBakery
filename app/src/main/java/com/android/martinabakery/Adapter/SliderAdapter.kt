@@ -1,12 +1,12 @@
-package com.android.martinabakery
+package com.android.martinabakery.Adapter
 
-import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
-import com.google.android.material.slider.Slider
+import com.android.martinabakery.R
+import com.android.martinabakery.SliderItem
 import com.makeramen.roundedimageview.RoundedImageView
 
 class SliderAdapter internal constructor(
